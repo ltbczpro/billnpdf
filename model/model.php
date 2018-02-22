@@ -51,3 +51,30 @@ function subscribe(){
 	$co_db_statement->execute([htmlspecialchars($_POST["email"]),
 		htmlspecialchars($_POST["password"])]);
 }
+// fonction pour afficher la liste de tâche
+function browseProfil(){
+	/*j'appelle la fonction getDatabaseConnection pour me connecter à la base 
+	de données avant de préparer une requête (selection de tous les éléments 
+	de la table t_elements) à l'execution.*/
+	$co_db_statement=getDatabaseConnection()->prepare("SELECT * FROM 
+		users WHERE userid= :userid");
+	//execution de la requete de selection
+	$co_db_statement->execute([':userid' => $_SESSION['userid']]);
+	/*récupération du résultat de l'execution stocké dans un tableau contenant
+	tous les éléments de de la requete*/ 
+	$profil=$co_db_statement->fetch();
+	// retourne le resultat du fetchAll
+	return $profil;
+}
+
+function editProfil(){
+	/*j'appelle la fonction getDatabaseConnection pour me connecter à la base de
+	données avant de préparer une requete (modification dans la table t_elements
+	des éléments elementName, elementDescription de la tache X. )*/
+	$co_db_statement=getDatabaseConnection()->prepare("UPDATE users SET email= :email, name= :name, adress= :adress, phone= :phone, siren= :siren, logo= :logo WHERE userid= :userid");
+	/*execution de la requete en donnant à la requete les valeurs d'input nom et 
+	descri ainsi que du parametre URL de id*/
+	$co_db_statement->execute([':email'=>$_POST["email"], ':name'=>$_POST["name"], ':adress'=>$_POST["adress"], ':phone'=>$_POST["phone"], ':siren'=>$_POST["siren"],
+		':logo'=>$_POST['logo'],':userid'=> $_SESSION["userid"]]);
+
+}

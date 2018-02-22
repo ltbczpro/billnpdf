@@ -23,7 +23,7 @@ if(isset($_POST["login"], $_POST["pwd"])) {
 			$_SESSION["userid"]=$userid;
 			//acces au controller de browse
 			
-			header("Location:home.php");
+			header("Location:about.php");
 		}
 	}
 } 
@@ -32,7 +32,7 @@ else {
 	require __DIR__."/../view/subscribe.php";
 	if (isset($_POST['email'], $_POST['password'])){
 		subscribe();
-		header("Location:/billstation/natif/index.php");
+		header("Location:/billnpdf/index.php");
 	}
 }
 

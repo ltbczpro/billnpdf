@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
 	<title>Bill'n'PDF</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
 
 		<h2> Log you for to access at the site Bill'n'PDF or<a href="controller/login.php"> to subscribe</a>.</h2>
 
-		<form method="POST" action="/billstation/natif/controller/login.php">
+		<form method="POST" action="/billnpdf/controller/login.php">
 			<section class="form-group">
 				<label for="login">Email:</label>
 				<input type="email" class="form-control" name="login">
