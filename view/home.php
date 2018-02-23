@@ -16,7 +16,7 @@
 		      	<p class="navbar-text">Bill'n'PDF</p>
 		    </section>
 		    <ul class="nav navbar-nav">
-		     	<li><a href="../controller/about.php"> Home</a></li>
+		     	<li><a href="../controller/home.php"> Home</a></li>
 		     	<li><a href="../controller/bill.php"> Create Bill</a></li>
 				<li><a href="../controller/profil.php"> My Profil</a></li>
 				<li><a href="../controller/invoid.php">My Bills</a></li>

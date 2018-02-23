@@ -30,32 +30,41 @@
 
 <article>
 	
-	<form method="POST" action="/billnpdf/controller/profil.php">
-		<section class="form-group">
-			<label for="email">Email: <?php echo($profil["email"]) ?></label>
-			<input type="text" name="email" value="<?php echo($profil["email"]) ?>">
-		</section>
-		<section class="form-group">
-			<label for="name">Name: <?php echo($profil["name"]) ?></label>
-			<input type="text" name="name" value=" <?php echo($profil["name"]) ?>">
-		</section>
-		<section class="form-group">
-			<label for="adress">Address: <?php echo($profil["adress"]) ?></label>
-			<input type="text" name="adress" value="<?php echo($profil["adress"]) ?>">
-		</section>
-		<section class="form-group">
-			<label for="phone">Phone: <?php echo($profil["phone"]) ?></label>
-			<input type="text" name="phone" value="<?php echo($profil["phone"]) ?>">
-		</section>
-		<section class="form-group">
-			<label for="siren">SIREN: <?php echo($profil["siren"]) ?></label>
-			<input type="text" name="siren" value="<?php echo($profil["siren"]) ?>">
-		</section>
-		<section class="form-group">
-			<label for="logo">Logo:</label><img src="<?php echo($profil["logo"]) ?>">
-			<input type="text" name="logo" value="<?php echo($profil["logo"]) ?>">
-		</section>
-		<input type="submit">
-	</form>
 
+	<?php if (count($clients)>0){?>
+		<ul>
+		<?php foreach ($clients as $client) {?>
+			<li>
+				<form method="POST" action="/billnpdf/controller/book.php">
+		<section class="form-group">
+			<label for="name">Name of the contact: <?php echo($client["name"]) ?></label>
+			<input type="text" name="name" value="<?php echo($client["name"]) ?>">
+		</section>
+		<section class="form-group">
+			<label for="adress">Address of the contact: <?php echo($client["adress"]) ?></label>
+			<input type="text" name="adress" value=" <?php echo($client["adress"]) ?>">
+		</section>
+		<input type="hidden" name="id" value="<?php echo($client["clientid"]) ?>">
+		<input type="submit" name="edit" value="EDIT">
+				</form>
+			</li>
+		<?php } ?>
+		</ul>
+	<?php } 
+	else{?>
+		<p>You have no contact in your address book.</p>
+	<?php } ?>
+	
+
+	<form method="POST" action="/billnpdf/controller/book.php">
+		<section class="form-group">
+			<label for="name">Name of the contact:</label>
+			<input type="text" name="name">
+		</section>
+		<section class="form-group">
+			<label for="adress">Address of the contact:</label>
+			<input type="text" name="adress">
+		</section>
+		<input type="submit" name="add" value="ADD">
+	</form>
 </article>

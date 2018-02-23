@@ -1,19 +1,17 @@
 <?php
 session_start();
 
-	require __DIR__."/../model/model.php";
+	require __DIR__."/../model/profil.php";
 	
-	$profil=browseProfil();
+	$profil=browseProfil($_SESSION['userid']);
 	
 
-	if (isset($_POST["email"], $_POST["name"],$_POST["adress"], $_POST["phone"],$_POST["siren"], $_POST["logo"])){
+	if (isset($_POST["email"], $_POST["name"], $_POST["adress"], $_POST["phone"], $_POST["siren"], $_POST["logo"])){
 		//alors on appelle la fonction edit()
+		if (editProfil($_POST["email"], $_POST["name"],$_POST["adress"], $_POST["phone"],$_POST["siren"], $_POST["logo"], $_SESSION["userid"])){
 
-		var_dump($_POST["email"], $_POST["name"],$_POST["adress"], $_POST["phone"],$_POST["siren"], $_POST["logo"]);
-
-		editProfil();
-
-		var_dump($_POST["email"], $_POST["name"],$_POST["adress"], $_POST["phone"],$_POST["siren"], $_POST["logo"]);
+			header('Location:profil.php');
+		}
 	}
 
 	require __DIR__."/../view/profil.php";
