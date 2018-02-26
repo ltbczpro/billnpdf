@@ -5,31 +5,31 @@
 
 ### User Stories
 
-_U.S 1_: En tant que *visiteur*, je veux pouvoir **créer un compte**.  
-_U.S 2_: En tant que *visiteur*, je veux pouvoir **me connecter au site**.  
-_U.S 3_: En tant qu'*utilisateur*, je veux pouvoir **lire mon profil**.  
-_U.S 4_: En tant qu'*utilisateur*, je veux pouvoir **modifier mon profil**.  
-_U.S 5_: En tant qu'*utilisateur*, je veux pouvoir **créer mon carnet d'adresse**.  
-_U.S 6_: En tant qu'*utilisateur*, je veux pouvoir **modifier mon carnet d'adresse**.  
-_U.S 7_: En tant qu'*utilisateur*, je veux pouvoir **supprimer mon carnet d'adresse**.  
-_U.S 8_: En tant qu'*utilisateur*, je veux pouvoir **créer une facture personnalisée**.  
-_U.S 9_: En tant qu'*utilisateur*, je veux pouvoir **lire une facture en PDF**.  
-_U.S 10_: En tant qu'*utilisateur*, je veux pouvoir **télécharger une facture en PDF**.  
-_U.S 11_: En tant qu'*utilisateur*, je veux pouvoir **sauvegarder une facture en PDF**.  
-_U.S 12_: En tant qu'*utilisateur*, je veux pouvoir **trier par filtre les factures**.  
-_U.S 13_: En tant qu'*utilisateur*, je veux pouvoir **envoyer une facture par mail**.  
+__U.S 1__: En tant que *visiteur*, je veux pouvoir **créer un compte**.  
+__U.S 2__: En tant que *visiteur*, je veux pouvoir **me connecter au site**.  
+__U.S 3__: En tant qu'*utilisateur*, je veux pouvoir **lire mon profil**.  
+__U.S 4__: En tant qu'*utilisateur*, je veux pouvoir **modifier mon profil**.  
+__U.S 5__: En tant qu'*utilisateur*, je veux pouvoir **créer mon carnet d'adresse**.  
+__U.S 6__: En tant qu'*utilisateur*, je veux pouvoir **modifier mon carnet d'adresse**.  
+__U.S 7__: En tant qu'*utilisateur*, je veux pouvoir **supprimer mon carnet d'adresse**.  
+__U.S 8__: En tant qu'*utilisateur*, je veux pouvoir **créer une facture personnalisée**.  
+__U.S 9__: En tant qu'*utilisateur*, je veux pouvoir **lire une facture en PDF**.  
+__U.S 10__: En tant qu'*utilisateur*, je veux pouvoir **télécharger une facture en PDF**.  
+__U.S 11__: En tant qu'*utilisateur*, je veux pouvoir **sauvegarder une facture en PDF**.  
+__U.S 12__: En tant qu'*utilisateur*, je veux pouvoir **trier par filtre les factures**.  
+__U.S 13__: En tant qu'*utilisateur*, je veux pouvoir **envoyer une facture par mail**.  
 
 ### Lots fonctionnels (*par ordre de priorité*)
 
-_LOT 1_: Système d'authentification (*U.S 1 & U.S 2*).  
-_LOT 2_: Système de facturation (*U.S 8, U.S 9 & U.S 10*).  
-_LOT 3_: Système de tri (*U.S 11 & U.S 12*).  
-_LOT 4_: CRUD du profil et du carnet d'adresse (*U.S 3, U.S 4, U.S 5, U.S 6 & U.S 7*).  
-_LOT 5_: Système d'envoi (*U.S 13*).
+__LOT 1__: Système d'authentification (*U.S 1 & U.S 2*).  
+__LOT 2__: Système de facturation (*U.S 8, U.S 9 & U.S 10*).  
+__LOT 3__: Système de tri (*U.S 11 & U.S 12*).  
+__LOT 4__: CRUD du profil et du carnet d'adresse (*U.S 3, U.S 4, U.S 5, U.S 6 & U.S 7*).  
+__LOT 5__: Système d'envoi (*U.S 13*).
 
 ### Maquettes
 
-//Maquette n°5//: https://wireframe.cc/0i1bNo  
+__Maquette n°5__: https://wireframe.cc/0i1bNo  
 
 ### Documentation
 
