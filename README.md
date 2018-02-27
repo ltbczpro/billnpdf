@@ -10,15 +10,15 @@ Vous pouvez voir le slide de présentation ici: http://slides.com/lucytbcz/deck-
 ### User Stories
 
 __U.S 1__: En tant que *visiteur*, je veux pouvoir **créer un compte** pour accéder au site.  
-__U.S 2__: En tant que *visiteur*, je veux pouvoir **me connecter au site** pour accéder aux fonctionnalités du site. 
-__U.S 3__: En tant qu'*utilisateur*, je veux pouvoir **créer mon profil** pour stocker mes informations personnelles. 
+__U.S 2__: En tant que *visiteur*, je veux pouvoir **me connecter au site** pour accéder aux fonctionnalités du site.  
+__U.S 3__: En tant qu'*utilisateur*, je veux pouvoir **créer mon profil** pour stocker mes informations personnelles.  
 __U.S 4__: En tant qu'*utilisateur*, je veux pouvoir **lire mon profil** pour connaitre mes informations personnelles.  
 __U.S 5__: En tant qu'*utilisateur*, je veux pouvoir **modifier mon profil** pour corriger mes informations personnelles.  
 __U.S 6__: En tant qu'*utilisateur*, je veux pouvoir **créer mon carnet d'adresse** pour stocker les informations de mes clients.  
 __U.S 7__: En tant qu'*utilisateur*, je veux pouvoir **lire mon carnet d'adresse** pour connaitre les informations de mes clients.  
 __U.S 8__: En tant qu'*utilisateur*, je veux pouvoir **modifier mon carnet d'adresse** pour corriger les informations de mes clients.  
 __U.S 9__: En tant qu'*utilisateur*, je veux pouvoir **supprimer mon carnet d'adresse** pour effacer les informations de mes clients.  
-__U.S 10__: En tant qu'*utilisateur*, je veux pouvoir **créer mes factures** pour facturer mes clients.
+__U.S 10__: En tant qu'*utilisateur*, je veux pouvoir **créer mes factures** pour facturer mes clients.  
 __U.S 11__: En tant qu'*utilisateur*, je veux pouvoir **parcourir mes factures** pour connaitre l'ensemble de mes factures.   
 __U.S 12__: En tant qu'*utilisateur*, je veux pouvoir **lire une de mes facture en PDF** pour connaitre le contenu de ma facture.  
 __U.S 13__: En tant qu'*utilisateur*, je veux pouvoir **télécharger une de mes factures en PDF** pour la stocker dans mon ordinateur.  
