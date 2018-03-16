@@ -1,5 +1,7 @@
 <?php
 
+
+require __DIR__."/../app/loader.php";
 require __DIR__."/../model/connection.php";
 
 if(isset($_POST["login"], $_POST["pwd"])) {

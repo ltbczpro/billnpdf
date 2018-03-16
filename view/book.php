@@ -1,70 +1,94 @@
 <!DOCTYPE html>
-<html>
-<head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bill'N'PDF - My Profil</title>
-	<link rel="stylesheet" href="../bootstrap.min.css">
-	
-</head>
-
-<header>
-
-		<nav class="navbar navbar-default">
-		    <section class="navbar-header">
-		      	<p class="navbar-text">Bill'n'PDF</p>
-		    </section>
-		    <ul class="nav navbar-nav">
-		     	<li><a href="../controller/home.php"> Home</a></li>
-		     	<li><a href="../controller/bill.php"> Create A Bill</a></li>
-				<li><a href="../controller/profil.php"> My Profil</a></li>
-				<li><a href="../controller/invoid.php">My Bills</a></li>
-				<li><a href="../controller/book.php"> Address Book</a></li>
-				<li><a href="../controller/contact.php"> Contact Us</a></li>
-				<li><a href="../controller/logout.php"> Logout</a></li>
-		    </ul>
-		</nav>
-
-</header>
-
-<article>
-	
-
-	<?php if (count($clients)>0){?>
-		<ul>
-		<?php foreach ($clients as $client) {?>
-			<li>
-				<form method="POST" action="/billnpdf/controller/book.php">
-		<section class="form-group">
-			<label for="name">Name of the contact: <?php echo($client["name"]) ?></label>
-			<input type="text" name="name" value="<?php echo($client["name"]) ?>">
-		</section>
-		<section class="form-group">
-			<label for="adress">Address of the contact: <?php echo($client["adress"]) ?></label>
-			<input type="text" name="adress" value=" <?php echo($client["adress"]) ?>">
-		</section>
-		<input type="hidden" name="id" value="<?php echo($client["clientid"]) ?>">
-		<input type="submit" name="edit" value="EDIT">
-				</form>
-			</li>
-		<?php } ?>
-		</ul>
-	<?php } 
-	else{?>
-		<p>You have no contact in your address book.</p>
-	<?php } ?>
-	
-
-	<form method="POST" action="/billnpdf/controller/book.php">
-		<section class="form-group">
-			<label for="name">Name of the contact:</label>
-			<input type="text" name="name">
-		</section>
-		<section class="form-group">
-			<label for="adress">Address of the contact:</label>
-			<input type="text" name="adress">
-		</section>
-		<input type="submit" name="add" value="ADD">
-	</form>
-</article>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bill'N'PDF - Address Book</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link href="../style/custom.css" rel="stylesheet" type="text/css">  
+    </head>
+    <body class="container-fluid">
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
+                <p class="navbar-brand text-primary">Bill'n'PDF</p>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../controller/home.php" class="nav-link  text-light"> Home</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/bill.php" class="nav-link  text-light"> Create Bill</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/profil.php" class="nav-link  text-light"> My Profile</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/invoid.php" class="nav-link  text-light">My Bills</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/book.php" class="nav-link  text-light"> Address Book</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/contact.php" class="nav-link  text-light"> Contact Us</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/logout.php" class="nav-link  text-light"> Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article class="fix-large">
+            <h2 class="text-sm-center mb-2">Address Book</h2>
+			<?php if (count($clients)>0){?>
+				<ul>
+					<?php foreach ($clients as $client) {?>
+						<li>
+							<div class="border border-info rounded offset-sm-1 col-sm-10 offset-sm-1 bg-light p-5 mt-5">
+							<form method="POST" action="/billnpdf/controller/book.php" id="selectClient_<?= $client['clientid']; ?>">
+								<section class="form-group">
+									<div class="form-row">
+										<label for="select" class="offset-sm-9">Select this contact:</label>
+										<input type="checkbox" <?php if (isset($_SESSION['selectedid']) &&  $_SESSION['selectedid']==$client['clientid']){ echo "checked";}?> name="select" class="col-sm-1" onChange="document.getElementById('selectClient_<?= $client['clientid']; ?>').submit()">
+										<input type="hidden" name="clientid" value="<?= $client['clientid'];?>">
+									</div>
+								</section>
+							</form>		
+							<form method="POST" action="/billnpdf/controller/book.php">
+								<section class="form-group">
+									<div class="form-row">
+										<label for="name" class="col-sm-12">Name of the contact: <?php echo($client["name"]) ?></label>
+									</div>
+									<div class="form-row">
+										<input type="text" name="name" value="<?php echo($client["name"]) ?>" class="col-sm-12">
+									</div>
+									<div class="form-row">
+										<label for="adress" class="col-sm-12">Address of the contact: <?php echo($client["adress"]) ?></label>
+									</div>
+									<div class="form-row">
+										<input type="text" name="adress" value=" <?php echo($client["adress"]) ?>" class="col-sm-12">
+									</div>
+								</section>
+								<input type="hidden" name="id" value="<?php echo($client["clientid"]) ?>">
+								<input type="submit" name="edit" value="Edit your customer" class="col-sm-12 btn btn-info" >
+							</form>
+						</div>
+						</li>
+					<?php } ?>
+				</ul>
+			<?php } 
+			else{?>
+				<p class="offset-sm-1 col-sm-10 offset-sm-1 text-sm-center">You have no contact in your address book.</p>
+			<?php } ?>
+			<form method="POST" action="/billnpdf/controller/book.php" class="border border-info rounded offset-sm-1 col-sm-10 offset-sm-1 bg-light p-5 mt-5">
+				<section class="form-group">
+					<div class="form-row">
+						<label for="name" class="col-sm-12">Name of the contact:</label>
+					</div>
+					<div class="form-row">
+						<input type="text" name="name" class="col-sm-12" >
+					</div>
+					<div class="form-row">
+						<label for="adress" class="col-sm-12">Address of the contact:</label>
+					</div>
+					<div class="form-row">
+						<input type="text" name="adress" class="col-sm-12">
+					</div>
+				</section>
+				<input type="submit" name="add" value="Add a new costumer" class="col-sm-12 btn btn-success">
+			</form>
+		</article>
+	</body>
+</html>	

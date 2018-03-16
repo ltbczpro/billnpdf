@@ -1,6 +1,6 @@
 <?php 
 
-session_start();
+require __DIR__."/../app/loader.php";
 
 // On détruit les variables de notre session
 session_unset ();
