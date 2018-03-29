@@ -13,20 +13,22 @@
 			<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
             	<p class="navbar-brand text-primary">Bill'n'PDF</p>
             	<ul class="navbar-nav">
-                	<li class="nav-item"><a href="../controller/home.php" class="nav-link  text-light"> Home</a>
-                	</li>
-                	<li class="nav-item"><a href="../controller/bill.php" class="nav-link  text-light"> Create Bill</a>
-                	</li>
-                	<li class="nav-item"><a href="../controller/profil.php" class="nav-link  text-light"> My Profile</a>
-                	</li>
-                	<li class="nav-item"><a href="../controller/invoid.php" class="nav-link  text-light">My Bills</a>
-                	</li>
-                	<li class="nav-item"><a href="../controller/book.php" class="nav-link  text-light"> Address Book</a>
-                	</li>
-                	<li class="nav-item"><a href="../controller/contact.php" class="nav-link  text-light"> Contact Us</a>
-                	</li>
-                	<li class="nav-item"><a href="../controller/logout.php" class="nav-link  text-light"> Logout</a>
-                	</li>
+                    <li class="nav-item"><a href="../controller/home.php" class="nav-link  text-light"> Home</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/bill.php" class="nav-link  text-light"> Create Bill</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/profil.php" class="nav-link  text-light"> My Profile</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/product.php" class="nav-link  text-light">My Products</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/book.php" class="nav-link  text-light"> My Address Book</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/invoid.php" class="nav-link  text-light">My Bills</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/contact.php" class="nav-link  text-light"> Contact Us</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/logout.php" class="nav-link  text-light"> Logout</a>
+                    </li>
             	</ul>
         	</nav>
 		</header>

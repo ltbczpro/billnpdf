@@ -2,8 +2,7 @@
     <!--<page_footer style="text-align: center; color:grey; line-height: none; font-size: 10px;">
     </page_footer>-->
     <table style="width:100%;" cellspacing="0" cellpadding="0">
-        <tr>
-            <td><img src="<?php echo $_POST['logo'];?>" width="150"></td>
+        <tr>ss
             <td style="text-align: right; line-height: none; width: 80%" ><h2>FACTURE</h2>
                 <h3>N°FAC-<?php echo $_POST['number'];?></h3>
                 <h4><?php echo date('d/m/Y'); ?></h4>

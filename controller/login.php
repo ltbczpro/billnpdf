@@ -12,7 +12,7 @@ if(isset($_POST["login"], $_POST["pwd"])) {
 	if($user) {
 		$login=$user["email"];
 		$password=$user["password"];
-		$userid=$user["userid"];
+		$userid=$user["user_id"];
 
 		
 		if($login==$_POST["login"] && $password==$_POST["pwd"]){

@@ -19,9 +19,11 @@
                     </li>
                     <li class="nav-item"><a href="../controller/profil.php" class="nav-link  text-light"> My Profile</a>
                     </li>
-                    <li class="nav-item"><a href="../controller/invoid.php" class="nav-link  text-light">My Bills</a>
+                    <li class="nav-item"><a href="../controller/product.php" class="nav-link  text-light">My Products</a>
                     </li>
-                    <li class="nav-item"><a href="../controller/book.php" class="nav-link  text-light"> Address Book</a>
+                    <li class="nav-item"><a href="../controller/book.php" class="nav-link  text-light"> My Address Book</a>
+                    </li>
+                    <li class="nav-item"><a href="../controller/invoid.php" class="nav-link  text-light">My Bills</a>
                     </li>
                     <li class="nav-item"><a href="../controller/contact.php" class="nav-link  text-light"> Contact Us</a>
                     </li>
@@ -37,12 +39,13 @@
 					<?php foreach ($clients as $client) {?>
 						<li>
 							<div class="border border-info rounded offset-sm-1 col-sm-10 offset-sm-1 bg-light p-5 mt-5">
-							<form method="POST" action="/billnpdf/controller/book.php" id="selectClient_<?= $client['clientid']; ?>">
+							<form method="POST" action="/billnpdf/controller/book.php" id="selectClient_<?= $client['client_id']; ?>">
 								<section class="form-group">
 									<div class="form-row">
 										<label for="select" class="offset-sm-9">Select this contact:</label>
-										<input type="checkbox" <?php if (isset($_SESSION['selectedid']) &&  $_SESSION['selectedid']==$client['clientid']){ echo "checked";}?> name="select" class="col-sm-1" onChange="document.getElementById('selectClient_<?= $client['clientid']; ?>').submit()">
-										<input type="hidden" name="clientid" value="<?= $client['clientid'];?>">
+										<input type="checkbox" <?php if (isset($_SESSION['selectedid']) &&  $_SESSION['selectedid']==$client['client_id'])
+										{ echo "checked";}?> name="select" class="col-sm-1" onChange="document.getElementById('selectClient_<?= $client['client_id']; ?>').submit()">
+										<input type="hidden" name="clientid" value="<?= $client['client_id'];?>">
 									</div>
 								</section>
 							</form>		
@@ -61,7 +64,7 @@
 										<input type="text" name="adress" value=" <?php echo($client["adress"]) ?>" class="col-sm-12">
 									</div>
 								</section>
-								<input type="hidden" name="id" value="<?php echo($client["clientid"]) ?>">
+								<input type="hidden" name="id" value="<?php echo($client["client_id"]) ?>">
 								<input type="submit" name="edit" value="Edit your customer" class="col-sm-12 btn btn-info" >
 							</form>
 						</div>

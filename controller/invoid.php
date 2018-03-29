@@ -1,6 +1,4 @@
 <?php
-
-
 require __DIR__."/../app/loader.php";
 
 require __DIR__."/../model/bill.php";
