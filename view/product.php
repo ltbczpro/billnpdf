@@ -66,6 +66,12 @@
                             <input type="hidden" name="productid" value="<?=$product["product_id"] ?>">
                             <input type="submit" name="edit" value="Edit your product" class="col-sm-12 btn btn-info" >
                         </form>
+
+                        <form method="POST" action="/billnpdf/controller/product.php">
+                            <input type="hidden" name="productid" value="<?=$product["product_id"] ?>">
+                            <input type="submit" name="delete" value="Delete your product" class="col-sm-12 btn btn-warning mt-3">
+                        </form>
+
                     </div>
                 </li>
             <?php } ?>

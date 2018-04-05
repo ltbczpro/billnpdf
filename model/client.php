@@ -43,4 +43,10 @@ function addClient($name, $adress, $userid){
 	$co_db_statement=getDatabaseConnection()->prepare("INSERT INTO clients (name, adress, user_id) VALUES (?,?,?)");
 	return $co_db_statement->execute([$name, $adress, $userid]);
 }
+
+function deleteClient($clientid){
+    $co_db_statement=getDatabaseConnection()->prepare("DELETE FROM clients  WHERE clients.client_id=?");
+    return $co_db_statement->execute([$clientid]);
+
+}
 ?>

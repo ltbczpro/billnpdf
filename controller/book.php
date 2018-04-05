@@ -23,5 +23,11 @@ if (isset($_POST["name"], $_POST["adress"], $_POST["add"])){
 	}
 }
 
+if (isset( $_POST["delete"], $_POST["id"])){
+    if (deleteClient( $_POST["id"])) {
+        header('Location:book.php');
+    }
+}
+
 require __DIR__."/../view/book.php";
 ?>
