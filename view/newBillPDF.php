@@ -1,8 +1,6 @@
 <page>
-    <!--<page_footer style="text-align: center; color:grey; line-height: none; font-size: 10px;">
-    </page_footer>-->
     <table style="width:100%;" cellspacing="0" cellpadding="0">
-        <tr>ss
+        <tr>
             <td style="text-align: right; line-height: none; width: 80%" ><h2>FACTURE</h2>
                 <h3>N°FAC-<?php echo $_POST['number'];?></h3>
                 <h4><?php echo date('d/m/Y'); ?></h4>
@@ -25,7 +23,7 @@
         <br>
         <tr>
             <td style="line-height: none;">
-                <p style="text-decoration: underline;"><big>Adresse de facturation</big></p>
+                <p style="text-decoration: underline;">Adresse de facturation</p>
                 <p><b><?php echo $_POST['clientName'];?></b></p>
                 <p><?php echo $_POST['clientAdress'];?></p>
                 <p>Référence:<?php echo $_POST['reference'];?></p>

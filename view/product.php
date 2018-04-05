@@ -42,15 +42,14 @@
                             <section class="form-group">
                                 <div class="form-row">
                                     <label for="select" class="offset-sm-9">Select this product:</label>
-                                    <input type="checkbox" <?php if (isset($_SESSION['selectedid']) &&  $_SESSION['selectedid']==$product['product_id'])
+                                    <input type="checkbox" <?php if (isset($_SESSION['selectid']) &&  $_SESSION['selectid']==$product['product_id'])
                                     { echo "checked";}?> name="select" class="col-sm-1" onChange="document.getElementById('selectProduct_<?= $product['product_id']; ?>').submit()">
-                                    <input type="hidden" name="productid" value="<?= $product['product_id'];?>">
+                                    <input type="hidden" name="id" value="<?= $product['product_id'];?>">
                                 </div>
                             </section>
                         </form>
                         <form method="POST" action="/billnpdf/controller/product.php">
-                            <section class="form-group">
-                                <div class="form-row">
+                            <section class="form-group"><div class="form-row">
                                     <label for="name" class="col-sm-12">Name of the product: <?= $product["name"] ?></label>
                                 </div>
                                 <div class="form-row">

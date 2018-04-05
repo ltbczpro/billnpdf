@@ -5,6 +5,11 @@ require __DIR__."/../model/product.php";
 
 $products=browseProduct($_SESSION['userid']);
 
+if ($_POST["id"]){
+
+    $_SESSION['selectid'] = $_POST['id'];
+}
+
 if (isset($_POST["name"], $_POST["designation"], $_SESSION["userid"], $_POST["add"])){
     $last_id=addProduct(htmlspecialchars($_POST["name"]), htmlspecialchars($_POST["designation"]), $_SESSION["userid"]);
     if (!is_null($last_id)){

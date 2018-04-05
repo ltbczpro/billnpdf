@@ -80,8 +80,12 @@
                     <input type="text" name="reference" class="col-sm-9">
                 </section>
                 <section class="form-group form-row">
-                    <label for="designation" class="col-sm-3">Product designation:</label>
-                    <textarea name="designation" class="col-sm-9"></textarea>
+                    <label for="productName" class="col-sm-3">Name of your product:</label>
+                    <input type="text" name="productName" class="col-sm-9" value="<?= $productName;?>">
+                </section>
+                <section class="form-group form-row">
+                    <label for="productDesi" class="col-sm-3">Designation of your product:</label>
+                    <input type="textarea" name="productDesi" class="col-sm-9" value="<?= $productDesi;?>">
                 </section>
                 <section class="form-group form-row">
                     <div class="col-sm-4">

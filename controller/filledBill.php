@@ -4,6 +4,7 @@
 require __DIR__."/../app/loader.php";
 require __DIR__."/../model/client.php";
 require __DIR__."/../model/profil.php";
+require __DIR__."/../model/product.php";
 require __DIR__."/../model/bill.php";
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
@@ -11,7 +12,7 @@ use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 
 $users=browseProfil($_SESSION['userid']);
 $client=selectClient($_SESSION['userid'], $_SESSION['selectedid']);
-
+$product=selectProduct($_SESSION["selectid"]);
 
 $name = $users['name'];
 $adress = $users['adress'];
@@ -20,6 +21,9 @@ $phone = $users['phone'];
 $siren = $users['siren'];
 $clientName = $client['name'];
 $clientAdress = $client['adress'];
+$productName= $product['name'];
+$productDesi=$product['designation'];
+
 
 $twt= (int)$_POST['upet']*(int)$_POST['quantity'];
 $atva= $twt*(int)$_POST['tva']/100;
