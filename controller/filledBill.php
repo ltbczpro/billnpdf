@@ -24,6 +24,10 @@ $clientAdress = $client['adress'];
 $productName= $product['name'];
 $productDesi=$product['designation'];
 
+/*$nbNewProduct=$_POST['nbNewProduct'];
+for($i = 1; $i < $nbNewProduct ; $i++) {
+    $newProductName = $_POST['productName'.$i];
+}*/
 
 $twt= (int)$_POST['upet']*(int)$_POST['quantity'];
 $atva= $twt*(int)$_POST['tva']/100;
