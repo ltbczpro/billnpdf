@@ -1,4 +1,4 @@
-<page>
+<page backtop="5%"  backbottom="5%"  backleft="5%"  backright="5%>
     <table style="width:100%;" cellspacing="0" cellpadding="0">
         <tr>
             <td style="text-align: right; line-height: none; width: 80%" ><h2>FACTURE</h2>
@@ -34,6 +34,7 @@
         <br>
     <table style="width: 100%; margin: auto;">
         <tr style="background-color: lightgrey;">
+            <th style="border-collapse:collapse;"><b><big>Article</big></b></th>
             <th style="border-collapse:collapse;"><b><big>Désignation</big></b></th>
             <th style="text-align: center;border-collapse:collapse;"><b><big>TVA</big></b></th>
             <th style="text-align: center;border-collapse:collapse;"><b><big>Qté.</big></b></th>
@@ -41,10 +42,11 @@
             <th style="text-align: right;border-collapse:collapse;"><b><big>Montant HT</big></b></th>
         </tr>
         <tr>
-            <td><?php echo $_POST['designation'];?></td>
+            <td><?php echo $_POST['productName'];?></td>
+            <td><?php echo $_POST['productDesi'];?></td>
             <td style="text-align: center;"><?php echo $_POST['tva'];?> %</td>
             <td style="text-align: center;"><?php echo $_POST['quantity'];?></td>
-            <td style="text-align: center;"><?php echo number_format($upet, 2, ',', ' ');?>€/mois</td>
+            <td style="text-align: center;"><?php echo number_format($_POST['upet'], 2, ',', ' ');?>€</td>
             <td style="text-align: right;"><?php echo number_format($twt, 2, ',', ' '); ?> €</td>
         </tr>
         <tr>
